@@ -12,7 +12,7 @@ load_dotenv()
 
 oauth2schema = security.OAuth2PasswordBearer(tokenUrl="/api/token")
 
-JWT_SECRET = os.getenv('SECRET_KEY')
+JWT_SECRET = os.environ.get('SECRET_KEY')
 
 
 def create_database():
